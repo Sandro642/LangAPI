@@ -1,5 +1,5 @@
-# Projet de Langues Multiples
-### Le Projet de Langues Multiples est conçu pour faciliter l'intégration de la fonctionnalité de langues multiples dans votre application en utilisant une API simple et efficace. Cette API vous permet de traduire dynamiquement le contenu de votre application dans différentes langues, offrant ainsi une expérience multilingue à vos utilisateurs.
+# LangAPI
+### Le Projet de LangAPI est conçu pour faciliter l'intégration de la fonctionnalité de langues multiples dans votre application en utilisant une API simple et efficace. Cette API vous permet de traduire dynamiquement le contenu de votre application dans différentes langues, offrant ainsi une expérience multilingue à vos utilisateurs.
 ##
 # Fonctionnalités
 Traduction de texte : Vous pouvez traduire du texte d'une langue source vers une langue cible.
