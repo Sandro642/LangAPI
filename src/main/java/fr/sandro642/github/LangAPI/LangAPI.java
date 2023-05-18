@@ -12,10 +12,14 @@ public class LangAPI extends JavaPlugin {
 
     private static LangAPI setuplang;
 
-    private static String langSet = "EN";
+    private static String langSet;
 
     public static LangAPI getInstance() {
         return setuplang;
+    }
+
+    public static void setLangPlugin(String lang) {
+        lang = langSet;
     }
 
     // Get the string from /messages/file.yml and format it with color codes (hex for 1.16+)
