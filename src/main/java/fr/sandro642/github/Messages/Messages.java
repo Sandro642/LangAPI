@@ -91,9 +91,9 @@ public class Messages {
 
         } catch (IOException ex) {
             ex.printStackTrace();
-            Bukkit.getConsoleSender().sendMessage(ChatColor.DARK_RED + "[EconomyPlus] Error loading languages!");
+            Bukkit.getConsoleSender().sendMessage(ChatColor.DARK_RED + " Error loading languages!");
         } catch (URISyntaxException e) {
-            Bukkit.getConsoleSender().sendMessage(ChatColor.DARK_RED + "[EconomyPlus] Error loading languages!");
+            Bukkit.getConsoleSender().sendMessage(ChatColor.DARK_RED + " Error loading languages!");
             throw new RuntimeException(e);
         }
 
