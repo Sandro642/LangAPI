@@ -12,12 +12,6 @@ import java.text.DecimalFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import me.itswagpvp.economyplus.EconomyPlus;
-import me.itswagpvp.economyplus.database.misc.DatabaseType;
-import me.itswagpvp.economyplus.messages.Messages;
-
-import static me.itswagpvp.economyplus.EconomyPlus.plugin;
-
 public class Utils {
 
     // No Perms
