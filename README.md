@@ -10,3 +10,6 @@ Pour utiliser cette API dans votre projet, suivez les étapes ci-dessous :
 ##
 Téléchargez et installez la bibliothèque de l'API dans votre projet.
 Importez la bibliothèque dans votre code source.
+
+##
+L'api est bientôt fini. dans : XX/XX/XX
