@@ -4,14 +4,14 @@ import static fr.sandro642.github.LangAPI.LangAPI.langSet;
 
 public class lang {
 
-    public static String en = "en";
-    public static String fr = "fr";
-    public static String de = "de";
-    public static String es = "es";
-    public static String it = "it";
-    public static String nl = "nl";
-    public static String pl = "pl";
-    public static String ru = "ru";
+    private static String en = "en";
+    private static String fr = "fr";
+    private static String de = "de";
+    private static String es = "es";
+    private static String it = "it";
+    private static String nl = "nl";
+    private static String pl = "pl";
+    private static String ru = "ru";
 
     public static void en () {
        en = langSet;
