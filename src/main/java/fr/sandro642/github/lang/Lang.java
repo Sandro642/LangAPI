@@ -2,7 +2,7 @@ package fr.sandro642.github.lang;
 
 import static fr.sandro642.github.LangAPI.LangAPI.langSet;
 
-public class lang {
+public class Lang {
 
     private static String en = "en";
     private static String fr = "fr";

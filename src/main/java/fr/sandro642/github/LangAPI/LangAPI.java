@@ -1,7 +1,7 @@
 package fr.sandro642.github.LangAPI;
 
 import fr.sandro642.github.Messages.Messages;
-import fr.sandro642.github.lang.lang;
+import fr.sandro642.github.lang.Lang;
 import fr.sandro642.github.misc.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -11,11 +11,16 @@ import static fr.sandro642.github.Messages.Messages.getMessageConfig;
 
 public class LangAPI extends JavaPlugin {
     private static LangAPI setuplang;
-    public static lang lang;
+
+    private static Lang lang;
     public static String langSet;
 
     public static LangAPI getInstance() {
         return setuplang;
+    }
+
+    public static Lang getLanguage() {
+        return lang;
     }
 
     // Get the string from /messages/file.yml and format it with color codes (hex for 1.16+)
