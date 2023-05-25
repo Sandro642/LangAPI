@@ -12,4 +12,4 @@ Téléchargez et installez la bibliothèque de l'API dans votre projet.
 Importez la bibliothèque dans votre code source.
 
 ##
-L'api est bientôt fini.
+L'api est bientôt fini. dans : XX/XX/XX
