@@ -90,7 +90,6 @@ public class LangAPI {
          */
 
         if (setup.equals(true)) {
-
             Messages.load();
         }
     }
