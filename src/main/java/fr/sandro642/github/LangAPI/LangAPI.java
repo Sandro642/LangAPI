@@ -92,14 +92,6 @@ public class LangAPI {
         if (setup.equals(true)) {
 
             Messages.load();
-
-            String messages = plugin.getConfig().getString("Language");
-            if (!(getMessageConfig(messages.toUpperCase()) == null)) {
-                langSet = messages.toUpperCase();
-                Bukkit.getConsoleSender().sendMessage("   - §fMessages: §a" + langSet);
-            } else {
-                Bukkit.getConsoleSender().sendMessage("   - §fMessages: §cInvalid file! (" + messages + "), using EN");
-            }
         }
     }
 
