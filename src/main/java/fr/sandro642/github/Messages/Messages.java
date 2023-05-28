@@ -1,6 +1,5 @@
 package fr.sandro642.github.Messages;
 
-import fr.sandro642.github.LangAPI.LangAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -17,9 +16,11 @@ import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
+import static fr.sandro642.github.LangAPI.LangAPI.plugin;
+
 public class Messages {
 
-    private static final String path = LangAPI.getInstance().getDataFolder() + "/messages";
+    private static final String path = plugin.getDataFolder() + "/messages";
 
     public static void load() {
 
@@ -33,13 +34,13 @@ public class Messages {
 
                 file.getParentFile().mkdirs();
 
-                InputStream stream = LangAPI.getInstance().getResource(file.getName());
+                InputStream stream = plugin.getResource(file.getName());
 
                 try {
 
                     if (stream != null) {
-                        if (!(new File(LangAPI.getInstance().getDataFolder() + File.separator + "messages" + File.separator + file.getName()).exists())) {
-                            Files.copy(stream, new File(LangAPI.getInstance().getDataFolder() + File.separator + "messages" + File.separator + file.getName()).toPath());
+                        if (!(new File(plugin.getDataFolder() + File.separator + "messages" + File.separator + file.getName()).exists())) {
+                            Files.copy(stream, new File(plugin.getDataFolder() + File.separator + "messages" + File.separator + file.getName()).toPath());
                         }
                     } else {
                         return;
@@ -73,7 +74,7 @@ public class Messages {
 
         try {
 
-            String s = new File(LangAPI.getInstance().getClass().getProtectionDomain().getCodeSource().getLocation()
+            String s = new File(plugin.getClass().getProtectionDomain().getCodeSource().getLocation()
                     .toURI()).getPath();
 
             JarFile jarFile = new JarFile(s);

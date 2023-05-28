@@ -4,11 +4,16 @@ import fr.sandro642.github.Messages.Messages;
 import fr.sandro642.github.misc.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.Plugin;
 
 import static fr.sandro642.github.Messages.Messages.getMessageConfig;
 
-public class LangAPI extends JavaPlugin {
+public class LangAPI {
+
+    public static Plugin plugin;
+    public LangAPI(Plugin plugin) {
+        this.plugin = plugin;
+    }
 
     public static String langSet;
 
@@ -51,10 +56,6 @@ public class LangAPI extends JavaPlugin {
     // Get language
     private static LangAPI setuplang;
 
-    public static LangAPI getInstance() {
-        return setuplang;
-    }
-
     // Get the string from /messages/file.yml and format it with color codes (hex for 1.16+)
     public static String getMessage(String path) {
 
@@ -90,7 +91,7 @@ public class LangAPI extends JavaPlugin {
 
             Messages.load();
 
-            String messages = LangAPI.getInstance().getConfig().getString("Language");
+            String messages = plugin.getConfig().getString("Language");
             if (!(getMessageConfig(messages.toUpperCase()) == null)) {
                 langSet = messages.toUpperCase();
                 Bukkit.getConsoleSender().sendMessage("   - §fMessages: §a" + langSet);

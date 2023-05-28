@@ -12,6 +12,8 @@ import java.text.DecimalFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static fr.sandro642.github.LangAPI.LangAPI.plugin;
+
 public class Utils {
 
     // No Perms
@@ -30,7 +32,7 @@ public class Utils {
     // Error sound played to player
     public static void playErrorSound(CommandSender sender) {
 
-        if (!LangAPI.getInstance().getConfig().getBoolean("Sounds.Use")) {
+        if (!plugin.getConfig().getBoolean("Sounds.Use")) {
             return;
         }
 
@@ -41,7 +43,7 @@ public class Utils {
         Player player = (Player) sender;
 
         try {
-            Sound x = Sound.valueOf(LangAPI.getInstance().getConfig().getString("Sounds.Error", "ENTITY_VILLAGER_NO"));
+            Sound x = Sound.valueOf(plugin.getConfig().getString("Sounds.Error", "ENTITY_VILLAGER_NO"));
             player.playSound(player.getPlayer().getLocation(), x, 1, 1);
         } catch (Exception e) {
             e.printStackTrace();
@@ -52,7 +54,7 @@ public class Utils {
     // Success sound played to player
     public static void playSuccessSound(CommandSender sender) {
 
-        if (!LangAPI.getInstance().getConfig().getBoolean("Sounds.Use")) {
+        if (!plugin.getConfig().getBoolean("Sounds.Use")) {
             return;
         }
 
@@ -63,7 +65,7 @@ public class Utils {
         Player player = (Player) sender;
 
         try {
-            Sound x = Sound.valueOf(LangAPI.getInstance().getConfig().getString("Sounds.Success", "ENTITY_PLAYER_LEVELUP"));
+            Sound x = Sound.valueOf(plugin.getConfig().getString("Sounds.Success", "ENTITY_PLAYER_LEVELUP"));
             player.playSound(player.getPlayer().getLocation(), x, 1, 1);
         } catch (Exception e) {
             e.printStackTrace();
@@ -90,11 +92,11 @@ public class Utils {
     public String format(Double d) {
 
         DecimalFormat df = new DecimalFormat("#.##"); //NUMBER CANNOT GO ABOVE BILLION DUE TO IT BEING A DOUBLE
-        if (LangAPI.getInstance().getConfig().getBoolean("Pattern.Enabled")) {
-            df = new DecimalFormat(LangAPI.getInstance().getConfig().getString("Pattern.Value", "###,###.##"));
+        if (plugin.getConfig().getBoolean("Pattern.Enabled")) {
+            df = new DecimalFormat(plugin.getConfig().getString("Pattern.Value", "###,###.##"));
         }
 
-        if (LangAPI.getInstance().getConfig().getBoolean("Formatting.Round-Decimals", false)) {
+        if (plugin.getConfig().getBoolean("Formatting.Round-Decimals", false)) {
             df.setRoundingMode(RoundingMode.HALF_UP);
         } else {
             df.setRoundingMode(RoundingMode.DOWN);
@@ -106,13 +108,13 @@ public class Utils {
             value = value + "." + 00;
         }
 
-        if (LangAPI.getInstance().getConfig().getBoolean("Formatting.Use-Decimals", true)) {
+        if (plugin.getConfig().getBoolean("Formatting.Use-Decimals", true)) {
 
             if (value.split("\\.")[1].length() == 1) {
                 value = value + "0";
             }
 
-            if (!LangAPI.getInstance().getConfig().getBoolean("Formatting.Have-Excessive-Zeros", false)) {
+            if (!plugin.getConfig().getBoolean("Formatting.Have-Excessive-Zeros", false)) {
 
                 if (value.split("\\.")[1].matches("00")) {
                     value = value.split("\\.")[0];
