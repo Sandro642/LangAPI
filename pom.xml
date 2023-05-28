@@ -38,6 +38,7 @@
             <groupId>com.github.MilkBowl</groupId>
             <artifactId>VaultAPI</artifactId>
             <version>9520d8847e</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

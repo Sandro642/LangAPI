@@ -40,7 +40,7 @@ public class LangAPI {
         en = langSet;
     }
     public void fr() {
-        fr = langSet;
+        langSet = fr;
     }
     public void de() {
         de = langSet;
