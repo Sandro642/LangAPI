@@ -10,22 +10,22 @@ import static fr.sandro642.github.Messages.Messages.getMessageConfig;
 
 public class LangAPI {
 
-    public static Plugin plugin;
+    private static Plugin plugin;
     public LangAPI(Plugin plugin) {
         this.plugin = plugin;
     }
 
     private static String langSet;
 
-    // Instance
-
-    public static LangAPI instance;
-
-    public static LangAPI setup() {
-        return instance;
-    }
-
     // Set language
+
+    // With instance
+
+    private static LangAPI lang;
+
+    public static LangAPI setLang() {
+        return lang;
+    }
 
     private static String en = "en";
     private static String fr = "fr";
@@ -36,28 +36,28 @@ public class LangAPI {
     private static String pl = "pl";
     private static String ru = "ru";
 
-    public static void en () {
+    public void en () {
         en = langSet;
     }
-    public static void fr() {
+    public void fr() {
         fr = langSet;
     }
-    public static void de() {
+    public void de() {
         de = langSet;
     }
-    public static void es() {
+    public void es() {
         es = langSet;
     }
-    public static void it() {
+    public void it() {
         it = langSet;
     }
-    public static void nl() {
+    public void nl() {
         nl = langSet;
     }
-    public static void pl() {
+    public void pl() {
         pl = langSet;
     }
-    public static void ru() {
+    public void ru() {
         ru = langSet;
     }
 
