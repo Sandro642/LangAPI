@@ -6,15 +6,20 @@ import org.bukkit.Sound;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static fr.sandro642.github.LangAPI.LangAPI.plugin;
-
 public class Utils {
+
+    private static Plugin plugin;
+
+    public Utils(Plugin plugin) {
+        this.plugin = plugin;
+    }
 
     // No Perms
     public static boolean hasPerm(CommandSender sender, String permission) {
