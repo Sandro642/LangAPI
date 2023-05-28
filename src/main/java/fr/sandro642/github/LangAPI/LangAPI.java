@@ -15,7 +15,15 @@ public class LangAPI {
         this.plugin = plugin;
     }
 
-    public static String langSet;
+    private static String langSet;
+
+    // Instance
+
+    public static LangAPI instance;
+
+    public static LangAPI setup() {
+        return instance;
+    }
 
     // Set language
 
@@ -82,7 +90,7 @@ public class LangAPI {
 
 
 
-    public void setupMessages(Boolean setup) {
+    public static void setupMessages(Boolean setup) {
         /**
          * Set up the LangAPI
          */
