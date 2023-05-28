@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.plugin.Plugin;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,9 +17,13 @@ import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
-import static fr.sandro642.github.LangAPI.LangAPI.plugin;
-
 public class Messages {
+
+    private static Plugin plugin;
+
+    public Messages(Plugin plugin) {
+        this.plugin = plugin;
+    }
 
     private static final String path = plugin.getDataFolder() + "/messages";
 
