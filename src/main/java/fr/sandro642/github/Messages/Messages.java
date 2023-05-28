@@ -23,9 +23,11 @@ public class Messages {
 
     public Messages(Plugin plugin) {
         this.plugin = plugin;
+        plugin.getDataFolder().mkdirs();
+       path = plugin.getDataFolder().getAbsolutePath() + "/messages";
     }
 
-    private static final String path = plugin.getDataFolder() + "/messages";
+    private static String path;
 
     public static void load() {
 
