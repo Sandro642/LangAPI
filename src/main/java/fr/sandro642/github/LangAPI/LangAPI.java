@@ -9,63 +9,56 @@ import org.bukkit.plugin.Plugin;
 import static fr.sandro642.github.Messages.Messages.getMessageConfig;
 
 public class LangAPI {
+    private static LangAPI lang;
 
-    private static Plugin plugin;
+    private Plugin plugin;
     public LangAPI(Plugin plugin) {
         this.plugin = plugin;
     }
 
-    private static String langSet;
+    private String langSet;
 
     // Set language
 
-    // With instance
-
-    private static LangAPI lang;
-
-    public static LangAPI setLang() {
-        return lang;
-    }
-
-    private static String en = "en";
-    private static String fr = "fr";
-    private static String de = "de";
-    private static String es = "es";
-    private static String it = "it";
-    private static String nl = "nl";
-    private static String pl = "pl";
-    private static String ru = "ru";
+    private final static String en = "en";
+    private final static String fr = "fr";
+    private final static String de = "de";
+    private final static String es = "es";
+    private final static String it = "it";
+    private final static String nl = "nl";
+    private final static String pl = "pl";
+    private final static String ru = "ru";
 
     public void en () {
-        en = langSet;
+       langSet = en;
     }
     public void fr() {
         langSet = fr;
     }
     public void de() {
-        de = langSet;
+        langSet = de;
     }
     public void es() {
-        es = langSet;
+        langSet = es;
     }
     public void it() {
-        it = langSet;
+        langSet = it;
     }
     public void nl() {
-        nl = langSet;
+        langSet = nl;
     }
     public void pl() {
-        pl = langSet;
+        langSet = pl;
     }
     public void ru() {
-        ru = langSet;
+        langSet = ru;
     }
 
     // Get language
     private static LangAPI setuplang;
 
     // Get the string from /messages/file.yml and format it with color codes (hex for 1.16+)
-    public static String getMessage(String path) {
+    public String getMessage(String path) {
 
         if (getMessageConfig(langSet).get(path) == null) {
             return path;
@@ -90,7 +83,7 @@ public class LangAPI {
 
 
 
-    public static void setupMessages(Boolean setup) {
+    public void setupMessages(Boolean setup) {
         /**
          * Set up the LangAPI
          */
