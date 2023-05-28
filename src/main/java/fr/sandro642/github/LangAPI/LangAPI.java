@@ -14,6 +14,7 @@ public class LangAPI {
     private Plugin plugin;
     public LangAPI(Plugin plugin) {
         this.plugin = plugin;
+        new Messages(plugin);
     }
 
     private String langSet;
