@@ -12,4 +12,7 @@ Téléchargez et installez la bibliothèque de l'API dans votre projet.
 Importez la bibliothèque dans votre code source.
 
 ##
-L'api est bientôt fini. dans : XX/XX/XX.
+L'api est bientôt fini le 05/28/2023.
+
+##
+L'api 1.0.1 fini le XX/XX/XXXX...
