@@ -2,7 +2,6 @@ package fr.sandro642.github.LangAPI;
 
 import fr.sandro642.github.Messages.Messages;
 import fr.sandro642.github.misc.Utils;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.Plugin;
 
@@ -10,11 +9,10 @@ import static fr.sandro642.github.Messages.Messages.getMessageConfig;
 
 public class LangAPI {
     private static LangAPI lang;
-
     private Plugin plugin;
     public LangAPI(Plugin plugin) {
         this.plugin = plugin;
-        new Messages(plugin);
+        Messages.setPlugin(plugin);
     }
 
     private String langSet;

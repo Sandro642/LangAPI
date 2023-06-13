@@ -20,12 +20,9 @@ import java.util.jar.JarFile;
 public class Messages {
 
     private static Plugin plugin;
-
-    public Messages(Plugin plugin) {
-        this.plugin = plugin;
-        plugin.getDataFolder().mkdirs();
-       path = plugin.getDataFolder().getAbsolutePath() + "/messages";
-    }
+    public static void setPlugin(Plugin plugin) {
+        Messages.plugin = plugin;
+        path = plugin.getDataFolder().getAbsolutePath() + "/messages";}
 
     private static String path;
 
