@@ -16,3 +16,4 @@ L'api est bientôt fini le 05/28/2023.
 
 ##
 L'api 1.0.1 fini le XX/XX/XXXX...
+[![](https://jitci.com/gh/Sandro642/LangAPI/svg)](https://jitci.com/gh/Sandro642/LangAPI)
