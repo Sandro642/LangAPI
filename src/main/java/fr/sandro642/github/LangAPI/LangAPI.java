@@ -22,6 +22,7 @@ public class LangAPI {
     public LangAPI(Plugin plugin) {
         this.plugin = plugin;
         Messages.setPlugin(plugin);
+        Makefile.setPlugin(plugin);
     }
 
     private String langSet;
