@@ -13,6 +13,8 @@ Importez la bibliothèque dans votre code source.
 
 ##
 L'api est bientôt fini le 05/28/2023.
+##
+Ajout d'un gui pour sélectionner sa langue dans son jeu
 
 ##
 L'api 1.0.1 fini le XX/XX/XXXX...
